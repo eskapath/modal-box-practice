@@ -1,0 +1,93 @@
+@use 'sass:color';
+
+$primary-color: black;
+$accent-color: orange;
+$text-color: white;
+$theme-light: hsl(39, 55%, 66%);
+$theme-dark: rgb(193, 142, 46);
+$font-weights: (
+  'regular': 400,
+  'medium': 500,
+  'bold': 700
+);
+$text-box-width: (
+  'small': 25ch,
+  'medium': 35ch,
+  'large': 50ch
+);
+
+
+@mixin btn-theme($theme: $theme-light) {
+  background-color: $theme;
+  border-radius: 1em;
+  border: 0;
+  margin-block: 0.8rem;
+  margin-inline: 0.2rem;
+  font-weight: map-get($map: $font-weights, $key: bold );
+  font-size: 20px;
+  padding: 0.8rem 0.8rem;
+  cursor:pointer;
+}
+
+@mixin btn-hover() {
+  opacity: 0.6;
+  box-shadow: 0 0 2px color.scale($theme-light,$lightness: 20%);
+  
+}
+
+
+body {
+  background-color: $primary-color;
+  color: $text-color;
+  display: grid;
+  place-items: center;
+  box-sizing: border-box;
+}
+
+h1, h2, h3 {
+  font-weight: map-get($font-weights, bold);
+}
+
+p {
+  font-weight: map-get($map: $font-weights, $key: medium);
+}
+
+.center {
+  max-width: map-get($text-box-width, medium);
+  margin-block: auto;
+
+}
+
+.btn {
+  transition: all 150ms ease;
+}
+
+.btn:hover {
+  @include btn-hover();
+}
+
+
+.hello-button {
+@include btn-theme();
+}
+
+
+.new-btn {
+@include btn-theme($theme: $theme-dark);
+}
+
+.some-modal {
+  max-width: map-get($map: $text-box-width, $key: large);
+  background-color: color.scale(darkgray, $lightness: 75%);
+  border: 0;
+  border-radius: 1em;
+}
+
+.some-modal::backdrop {
+  background-color: color.scale(darkgray,$lightness: 20% );
+  opacity: 0.2;
+}
+
+
+
+

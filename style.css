@@ -1,0 +1,24 @@
+body {
+  display: grid;
+  place-items: center;
+  border:0;
+}
+
+.hero-section {
+  max-width: 40ch;
+  padding: 0.2em 1em;
+}
+
+.modal {
+  border: 0;
+  border-radius: 1em;
+  box-shadow: 0 0 1em rgb(0,0,0 / 0.4);
+}
+
+.modal::backdrop {
+  background-image: linear-gradient(to left, blue, green);
+  opacity: 0.4;
+}
+
+/* utility classes: */
+

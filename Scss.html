@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Scss-Test</title>
+  <link rel="stylesheet" href="public/stylesheets/sass.css">
+</head>
+<body>
+  <div class="center">
+  <h1>Hello World</h1>
+  <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nemo autem assumenda voluptatibus, quia laudantium magnam incidunt, officia, aperiam architecto et ipsa.</p>
+
+  <button id="open" class="hello-button btn-base btn">Hello</button>
+
+  <button id="open" class="new-btn btn-base btn">New ONE</button>
+
+  <dialog class="some-modal">
+    <div class="grid">
+      <h2>Modal:</h2>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis error ex tempora velit magni atque, voluptas eaque molestiae consectetur earum!</p>
+    </div>
+  </dialog>
+
+</div>
+  <script>
+    const modal = document.querySelector('.some-modal');
+    const openBtn = document.querySelectorAll('#open');
+
+    openBtn.forEach(function(el){
+      el.addEventListener('click', (e) => {
+        modal.showModal();
+      });
+    });
+
+  </script>
+</body>
+</html>

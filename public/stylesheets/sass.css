@@ -1,0 +1,67 @@
+body {
+  background-color: black;
+  color: white;
+  display: grid;
+  place-items: center;
+  box-sizing: border-box;
+}
+
+h1, h2, h3 {
+  font-weight: 700;
+}
+
+p {
+  font-weight: 500;
+}
+
+.center {
+  max-width: 35ch;
+  margin-block: auto;
+}
+
+.btn {
+  transition: all 150ms ease;
+}
+
+.btn:hover {
+  opacity: 0.6;
+  box-shadow: 0 0 2px #e0c593;
+}
+
+.hello-button {
+  background-color: hsl(39deg, 55%, 66%);
+  border-radius: 1em;
+  border: 0;
+  margin-block: 0.8rem;
+  margin-inline: 0.2rem;
+  font-weight: 700;
+  font-size: 20px;
+  padding: 0.8rem 0.8rem;
+  cursor: pointer;
+}
+
+.new-btn {
+  background-color: rgb(193, 142, 46);
+  border-radius: 1em;
+  border: 0;
+  margin-block: 0.8rem;
+  margin-inline: 0.2rem;
+  font-weight: 700;
+  font-size: 20px;
+  padding: 0.8rem 0.8rem;
+  cursor: pointer;
+}
+
+.some-modal {
+  max-width: 50ch;
+  background-color: #eaeaea;
+  border: 0;
+  border-radius: 1em;
+}
+
+.some-modal::backdrop {
+  background-color: #bababa;
+  opacity: 0.2;
+}
+
+/*# sourceMappingURL=sass.css.map */
